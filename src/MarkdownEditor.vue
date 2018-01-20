@@ -532,7 +532,7 @@ export default{
 		 * 更新text时，向上层通知
 		 */
 		text (val) {
-			this.$emit('textupdate', val);
+			this.$emit('textUpdate', val);
 		},
 
 		// 从localstorage里面提取以前数据

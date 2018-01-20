@@ -8,7 +8,7 @@
 使用npm安装：
 
 ```
-	npm i --save be-markdown-editor
+npm i --save be-markdown-editor
 ```
 
 引入到Vue项目中：
