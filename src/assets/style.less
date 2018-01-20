@@ -1,0 +1,294 @@
+@color-transition: background-color 0.3s linear, color 0.3s linear, background-image 0.3s linear;
+
+@content-font: -apple-system, "SF UI Text", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+
+/* 滚动条样式 */
+::-webkit-scrollbar {
+	width: 15px;
+}
+
+::-webkit-scrollbar-track {
+	background-color: rgba(0, 0, 0, 0.15);
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: rgba(0, 0, 0, 0.2); 
+	border-radius: 5px;
+}
+
+::-webkit-scrollbar-button {
+	height: 0;
+}
+::-webkit-scrollbar-corner {
+	background-color: rgba(0, 0, 0, 0.3);
+}
+
+.hidden{
+	display: none;
+	opacity: 0;
+}
+
+// 按钮通用样式
+.btn{
+	display: block;
+	height: 30px;
+	margin-left: 10px;
+	border: 1px solid transparent;
+	border-radius: 5px;
+	padding: 0 20px;
+	box-sizing: border-box;
+
+	color: #fff;
+	font-size: 14px;
+	line-height: 30px;
+	
+	cursor: pointer;
+
+	transition: all .2s ease;
+}
+// 普通按钮
+.btn-normal{
+	.btn;
+	border-color: #ccc;
+	background-color: rgba(222, 222, 222, 0.55);
+	&:hover{
+		background-color: rgba(222, 222, 222, 0.45);
+		border-color: #adadad;
+	}
+}
+// 红色按钮
+// 危险按钮
+.btn-red, .btn-danger{
+	.btn;
+	border-color: #d43f3a;
+	background-color: rgba(217, 83, 79, 0.55);
+	&:hover{
+		background-color: rgba(217, 83, 79, 0.45);
+		border-color: #ac2925;
+	}
+}
+// 蓝色按钮
+// 基本按钮
+.btn-blue, .btn-primary{
+	.btn;
+	border-color: #357ebd;
+	background-color: rgba(66, 139, 202, 0.55);
+	&:hover{
+		background-color: rgba(66, 139, 202, 0.45);
+		border-color: #285e8e;
+	}
+}
+
+// 基本按钮点亮状态
+.btn-light{
+	.btn;
+	border-color: #46b8da;
+	background-color: rgba(91, 192, 222, 0.55);
+	box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.2);
+}
+
+// 不可用按钮
+.btn-disabled{
+	.btn;
+	border-color: #ccc;
+	background-color: transparent;
+	cursor: not-allowed;
+	&:hover{
+		background-color: transparent;
+		border-color: #ccc;
+	}
+}
+
+.btn-thin{
+	height: 26px;
+	line-height: 26px;
+}
+
+.container{
+	-webkit-transition: @color-transition;
+	transition: @color-transition;
+
+	.headbar{
+		position: absolute;
+		width: 100%;
+		top: 0;
+		height: 30px;
+
+		.left-btn-list, .right-btn-list{
+			height: 100%;
+			display: flex;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			align-items: center;
+			.btn-group{
+				position: relative;
+				padding: 5px;
+
+				display: flex;
+				flex-direction: row;
+				flex-wrap: nowrap;
+				align-items: center;
+				justify-content: flex-start;
+
+				&:after{
+					content: "";
+					display: block;
+					position: absolute;
+					top: 50%;
+					height: 20px;
+					margin-top: -10px;
+				};
+			}
+
+			a.md-btn{
+				width: 25px;
+				height: 25px;
+				display: block;
+				font-family: sans-serif;
+				position: relative;
+				font-size: 14px;
+				line-height: 25px;
+				text-align: center;
+				cursor: pointer;
+			}
+
+			.table-adder{
+				width: 300px;
+				padding: 10px 15px;
+				z-index: 200;
+				background: #fff;
+				border: 1px solid rgba(255, 255, 255, 0.4);
+				border-radius: 8px;
+				position: absolute;
+				top: 35px;
+				left: 0;
+				color: rgba(0, 0, 0, 0.5);
+				input[type=text]{
+					position: relative;
+					height: 34px;
+					width: 80px;
+					border-radius: 4px;
+					padding: 6px 12px;
+					box-sizing: border-box;
+					background-color: rgba(255, 255, 255, 0);
+					border: 1px solid rgba(0, 0, 0, 0.25);
+					font-size: 14px;
+					vertical-align: middle;
+					transition: border .2s linear, box-shadow .2s linear;
+
+					&:focus{
+						border-color: #66afe9;
+						outline: 0;
+						box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+					}
+
+					&.error{
+						border-color: #b94a48;
+						outline: 0;
+						&:focus{
+							box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #d59392;
+						}
+					}
+				}
+				a{
+					color: #fff;
+					float: right;
+				}
+			}
+		}
+
+		.left-btn-list{
+			float: left;
+			justify-content: flex-start;
+			.btn-group:after{
+				right: 0;
+				left: auto;
+			}
+		}
+
+		.right-btn-list{
+			float: right;
+			justify-content: flex-end;
+			.btn-group:after{
+				left: 0;
+				right: auto;
+			}
+		}
+	}
+
+	.main-area{
+		position: absolute;
+		width: 100%;
+		top: 30px;
+		bottom: 20px;
+
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: space-between;
+		align-items: center;
+
+		.editor{
+			width: 100%;
+			height: 100%;
+			display: flex;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			justify-content: center;
+			align-items: center;
+			transition: @color-transition;
+			font-size: 16px;
+			font-family: @content-font;
+			line-height: 20px;
+			.CodeMirror{
+				width: 100%;
+			}
+		}
+
+		.preview{
+			width: 100%;
+			height: 100%;
+			padding: 10px;
+			border: none;
+			border-left: 0;
+			box-sizing: border-box;
+			overflow-x: visible;
+			overflow-y: auto;
+			text-align: left;
+			/*word-break: break-all;*/
+		}
+	}
+
+	.bottom-bar{
+		position: absolute;
+		width: 100%;
+		height: 20px;
+		bottom: 0;
+		box-sizing: border-box;
+		border-top: 1px solid rgba(255, 255, 255, 0.3);
+		
+		.wordnum {
+			float: right;
+			height: 20px;
+			line-height: 20px;
+			padding-right: 10px;
+			font-size: 14px;
+		}
+	}
+}
+
+/*表格输入框的显示隐藏*/
+.slide-fade-enter-active {
+	transition: all .3s ease;
+}
+.slide-fade-leave-active {
+	transition: all .3s ease;
+}
+.slide-fade-enter{
+	opacity: 0;
+	transform: translateY(-10px);
+}
+.slide-fade-leave-active{
+	opacity: 0;
+	transform: translateY(-10px);
+}

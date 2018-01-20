@@ -1,0 +1,78 @@
+.container {
+  position: absolute;
+  top: 0;
+  bottom: 1px;
+  width: 100%;
+  background-size: cover;
+  background-image: url(https://p3.ssl.qhimg.com/t0121c4f255f95c5e79.jpg);
+}
+.container .headbar {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.container .headbar .left-btn-list .btn-group:after,
+.container .headbar .right-btn-list .btn-group:after {
+  border-right: 1px solid rgba(255, 255, 255, 0.4);
+}
+.container .headbar .left-btn-list a.md-btn,
+.container .headbar .right-btn-list a.md-btn {
+  color: rgba(255, 255, 255, 0.8);
+}
+.container .headbar .left-btn-list a.md-btn:hover,
+.container .headbar .right-btn-list a.md-btn:hover,
+.container .headbar .left-btn-list a.md-btn.focus,
+.container .headbar .right-btn-list a.md-btn.focus {
+  background-color: rgba(255, 255, 255, 0.3);
+  color: rgba(0, 0, 0, 0.4);
+}
+.container .main-area {
+  background-color: none;
+}
+.container .main-area .editor {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.container .main-area .editor .CodeMirror {
+  color: #fff;
+}
+.container .main-area .editor .CodeMirror-gutters {
+  border-right-color: rgba(255, 255, 255, 0.15);
+  background: transparent;
+}
+.container .main-area .editor .CodeMirror-gutters .CodeMirror-guttermarker {
+  color: black;
+}
+.container .main-area .editor .CodeMirror-gutters .CodeMirror-guttermarker-subtle {
+  color: #999;
+}
+.container .main-area .editor .CodeMirror-linenumber {
+  color: rgba(255, 255, 255, 0.6);
+}
+.container .main-area .editor .CodeMirror-cursor {
+  border-left-color: #fff;
+}
+.container .main-area .editor .CodeMirror-focused .CodeMirror-selected {
+  background: rgba(0, 0, 0, 0.3);
+}
+.container .main-area .preview {
+  background-color: none;
+  color: #fff;
+}
+.container .main-area .preview .md-text {
+  font-size: 16px;
+  line-height: 28px;
+}
+.container .bottom-bar {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.container .bottom-bar .wordnum {
+  color: #fff;
+}
+.container.dark {
+  background-image: none;
+  background-color: #262626;
+}
+.container.dark .main-area {
+  color: #b4b4b4;
+}
+.container.dark .main-area .editor .CodeMirror {
+  color: #d2d2d2;
+}

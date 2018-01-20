@@ -1,0 +1,35 @@
+.CodeMirror {
+  width: 100%;
+  height: 100%;
+  font-family: -apple-system, "SF UI Text", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+  background-color: rgba(255, 255, 255, 0);
+}
+.CodeMirror pre,
+.CodeMirror pre span {
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.CodeMirror-scrollbar-filler,
+.CodeMirror-gutter-filler {
+  background-color: transparent;
+  /* The little square between H and V scrollbars */
+}
+.CodeMirror-gutters {
+  border-right-color: rgba(255, 255, 255, 0.15);
+  background: transparent;
+}
+.CodeMirror-gutters .CodeMirror-guttermarker {
+  color: black;
+}
+.CodeMirror-gutters .CodeMirror-guttermarker-subtle {
+  color: #999;
+}
+.CodeMirror-linenumber {
+  color: rgba(255, 255, 255, 0.6);
+}
+.CodeMirror-cursor {
+  border-left-color: #fff;
+}
+.CodeMirror-focused .CodeMirror-selected {
+  background: rgba(0, 0, 0, 0.3);
+}

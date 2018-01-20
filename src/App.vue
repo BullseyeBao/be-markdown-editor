@@ -1,28 +1,29 @@
+<style>
+#app {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	min-width: 1366px;
+	overflow-x: auto;
+	background-size: cover;
+	transition: background-image 0.3s linear;
+}
+</style>
+
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <HelloWorld/>
-  </div>
+	<div id="app">
+		<markdown-editor></markdown-editor>
+	</div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld'
+import markdownEditor from './MarkdownEditor.vue';
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+	components: {
+		markdownEditor
+	}
+};
 </script>
-
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
